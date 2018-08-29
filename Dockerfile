@@ -1,3 +1,3 @@
-FROM kasireg.azurecr.io/windowsimage
+FROM kasireg.azurecr.io/windowsimage:latest
 
 RUN echo hello world!
