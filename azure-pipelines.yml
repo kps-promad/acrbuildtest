@@ -13,6 +13,7 @@ variables:
   dockerRegistryServiceConnection: 'f237a386-901a-4392-a906-432d0388cd72'
   imageRepository: 'kpspromadacrbuildtestubuntu'
   containerRegistry: 'kasireg.azurecr.io'
+  containerRegistry1: 'acrscannerdev.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
   
@@ -44,5 +45,5 @@ stages:
           docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache aquasec/trivy --exit-code 0 --severity MEDIUM,HIGH --ignore-unfixed $(containerRegistry)/$(imageRepository):$(tag)
     - task: Docker@2
       inputs:
-        containerRegistry: 'grant acrdevscanner access'
+        containerRegistry1: 'grant acrdevscanner access'
         command: 'login'
