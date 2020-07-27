@@ -45,5 +45,5 @@ stages:
           docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache aquasec/trivy --exit-code 0 --severity MEDIUM,HIGH --ignore-unfixed $(containerRegistry)/$(imageRepository):$(tag)
     - task: Docker@2
       inputs:
-        containerRegistry1: 'grant acrdevscanner access'
+        containerRegistry: 'ACR-Scanner-DEv'
         command: 'login'
