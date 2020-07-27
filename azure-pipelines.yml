@@ -30,6 +30,11 @@ stages:
       vmImage: $(vmImageName)
     steps:
     - task: Docker@2
+      inputs:
+        containerRegistry: 'ACR-Scanner-DEv'
+        command: 'login'
+
+    - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
@@ -43,7 +48,4 @@ stages:
       inputs:
         script: |
           docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache aquasec/trivy --exit-code 0 --severity MEDIUM,HIGH --ignore-unfixed $(containerRegistry)/$(imageRepository):$(tag)
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'ACR-Scanner-DEv'
-        command: 'login'
+   
