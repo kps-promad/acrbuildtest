@@ -47,6 +47,6 @@ stages:
       displayName: Login to ACR
       inputs:
         command: login
-        repository: acrscannerdev.azurecr.io
+        containerRegistry: acrscannerdev.azurecr.io
         
           
