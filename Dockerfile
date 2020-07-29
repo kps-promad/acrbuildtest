@@ -6,5 +6,5 @@
 #FROM acrscannerdev.azurecr.io/testimage:dockerlinux-a7d2c6a
 #FROM acrscannerdev.azurecr.io/testimage:centos20180604
 #FROM vulnerables/web-dvwa
-FROM acrscannerdev.azurecr.io/testimage:ubuntutrusty-20170602
+FROM acrscannerdev.azurecr.io/testimage:ubuntu
 RUN echo hello world!
