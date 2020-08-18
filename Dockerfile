@@ -7,5 +7,6 @@
 #FROM acrscannerdev.azurecr.io/testimage:centos20180604
 #FROM vulnerables/web-dvwa
 #FROM acrscannerdev.azurecr.io/testimage:ubuntu
-FROM acrscannerdev.azurecr.io/vulnimages:dockerdev1
+#FROM acrscannerdev.azurecr.io/vulnimages:dockerdev1
+FROM acrscannerdev.azurecr.io/vulnimages:perconalatest
 RUN echo hello world!
