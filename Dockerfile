@@ -8,5 +8,6 @@
 #FROM vulnerables/web-dvwa
 #FROM acrscannerdev.azurecr.io/testimage:ubuntu
 #FROM acrscannerdev.azurecr.io/vulnimages:dockerdev1
-FROM acrscannerdev.azurecr.io/vulnimages:logstash710
+#FROM acrscannerdev.azurecr.io/vulnimages:logstash710
+FROM acrscannerdev.azurecr.io/vulnimages:elasticsearch710
 RUN echo hello world!
