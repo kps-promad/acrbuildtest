@@ -11,5 +11,6 @@
 #FROM acrscannerdev.azurecr.io/vulnimages:logstash710
 #FROM acrscannerdev.azurecr.io/vulnimages:elasticsearch710
 #FROM acrscannerdev.azurecr.io/vulnimages:node10
-FROM acrscannerdev.azurecr.io/vulnimages:java_latest
+#FROM acrscannerdev.azurecr.io/vulnimages:java_latest
+FROM acrscannerdev.azurecr.io/vulnimages:dvwa_latest
 RUN echo hello world!
