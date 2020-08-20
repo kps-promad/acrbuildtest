@@ -14,5 +14,6 @@
 #FROM acrscannerdev.azurecr.io/vulnimages:java_latest
 #FROM acrscannerdev.azurecr.io/vulnimages:dvwa_latest
 #FROM acrscannerdev.azurecr.io/vulnimages:jenkins_latest
-FROM acrscannerdev.azurecr.io/vulnimages:tomcat_latest
+#FROM acrscannerdev.azurecr.io/vulnimages:tomcat_latest
+FROM acrscannerdev.azurecr.io/vulnimages:mysql_latest
 RUN echo hello world!
